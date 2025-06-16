@@ -4,7 +4,7 @@ A simple python code to extract images from JSON files, that are downloaded from
 ## Installation
 You can download the `scryfall-image-extractor.py` file directly by clicking the link below:
 
-[Download scryfall-image-extractor.py](https://github.com/dedoZvezdi/scryfall-image-extractor/releases/download/Release/scryfall-image-extractor.py)
+[Download scryfall-image-extractor.py](https://github.com/dedoZvezdi/scryfall-image-extractor/releases/download/Update/scryfall-image-extractor.py)
 
 ## Copyright notice and license
 
