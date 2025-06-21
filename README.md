@@ -1,31 +1,76 @@
-## Description
-A simple python code to extract images from JSON files, that are downloaded from scryfall (bulk).
+# MTG Card Image Downloader
 
-## Installation
-You can download the `scryfall-image-extractor.py` file directly by clicking the link below:
+A GUI-based Python tool that downloads Magic: The Gathering (MTG) card images from a JSON file by reading their `image_uris`. It supports selecting image size and optional image resizing.
 
-[Download scryfall-image-extractor.py](https://github.com/dedoZvezdi/scryfall-image-extractor/releases/download/Update/scryfall-image-extractor.py)
+---
 
-## Copyright notice and license
+## 🧠 What does this script do?
 
-MIT License
+- Loads a JSON file containing MTG card data.
+- Allows the user to choose a target directory to save images.
+- Extracts image URLs from the `image_uris` key (or from `card_faces` for double-faced cards).
+- Lets the user choose a preferred image size (`small`, `normal`, `large`, `png`, `art_crop`, or `border_crop`).
+- Optionally resizes the images to custom dimensions.
+- Automatically avoids filename conflicts by appending counters.
+- Saves the downloaded images in `.png` or `.jpg` format depending on the original image mode.
 
-Copyright (c) 2024 Svetlin Ivanov
+---
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## 📦 Requirements
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Make sure you have the following Python packages installed:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+```bash
+pip install requests Pillow
+```
+```bash
+pip install tkinter
+```
+```bash
+pip install pathlib
+```
+*These are required in addition to Python's standard libraries (json, tkinter, re, pathlib, etc.).*
+
+---
+
+## 🚀 Usage
+
+1. Run the script:
+
+```bash
+python scryfall-image-extractor.py
+```
+2. A file dialog will open. Select your JSON file with MTG card data.
+
+3. Select a directory where you want to save the images.
+
+4. Choose the desired image size from a list.
+
+5. Optionally, choose whether to resize images and enter width and height if desired.
+
+6. The script will download the images and show a final summary.
+
+---
+
+## 🛠 Features  
+
+- Friendly GUI using `tkinter`
+
+- Supports multiple image formats and sizes
+
+- Image resizing with anti-aliasing
+
+- Automatic filename sanitization
+
+- Progress reporting and error handling
+
+---
+
+## 🧹Notes
+
+- Filenames are sanitized to avoid invalid characters.
+
+- Duplicate filenames are resolved by appending `_1`, `_2`, etc.
+
+- If the image mode is `RGBA`, it's saved as `.png`; otherwise, `.jpg`.
+   
