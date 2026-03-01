@@ -4,7 +4,7 @@ A GUI-based Python tool that downloads Magic: The Gathering (MTG) card images fr
 
 ---
 
-## 🧠 What does this script do?
+## What does this script do?
 
 - Loads a JSON file containing MTG card data.
 - Allows the user to choose a target directory to save images.
@@ -16,7 +16,7 @@ A GUI-based Python tool that downloads Magic: The Gathering (MTG) card images fr
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 Make sure you have the following Python packages installed:
 
@@ -33,7 +33,7 @@ pip install pathlib
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. Run the script:
 
@@ -52,7 +52,7 @@ python scryfall-image-extractor.py
 
 ---
 
-## 🛠 Features  
+## Features  
 
 - Friendly GUI using `tkinter`
 
@@ -66,7 +66,7 @@ python scryfall-image-extractor.py
 
 ---
 
-## 🧹Notes
+## Notes
 
 - Filenames are sanitized to avoid invalid characters.
 
